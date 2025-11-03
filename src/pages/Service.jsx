@@ -3,26 +3,13 @@ import pen from "../assets/pen.png";
 import db from "../assets/db.png";
 import MongoDB from "../assets/mongoDB.png";
 import white3 from "../assets/white3.svg";
-import { motion } from "framer-motion/";
 
 const Servive = () => {
   return (
     <>
-      <motion.div
-        className="services-content"
-        initial={{ opacity: 0, y: 18 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
-      >
+      <div className="services-content">
         <div className="services-and-skill">
-          <motion.div
-            className="different-service"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-          >
+          <div className="different-service">
             <div className="card-im-xl">
               <img src={front} alt="mes service" className="ser-img" />
               <div className="conten-info-service">
@@ -57,25 +44,13 @@ const Servive = () => {
                 </p>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
-      </motion.div>
-      <motion.h1
-        className="title-skill-sevice"
-        initial={{ opacity: 0, y: 10 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.45 }}
-      >
+      </div>
+      <h1 className="title-skill-sevice">
         <span>competences techniques et</span> outils
-      </motion.h1>
-      <motion.div
-        className="service-development-and-design container"
-        initial={{ opacity: 0, y: 12 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.55 }}
-      >
+      </h1>
+      <div className="service-development-and-design container">
         <div className="service-design-tools">
           <h1 className="title-design">outils de design</h1>
           <div className="service-tools-d">
@@ -105,28 +80,16 @@ const Servive = () => {
             <span className="level-designdvnj"></span>
           </div>
         </div>
-      </motion.div>
-      <motion.div
-        className="servicebdd-tools-service container"
-        initial={{ opacity: 0, y: 10 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.45 }}
-      >
+      </div>
+      <div className="servicebdd-tools-service container">
         <h1 className="title-db">base de données</h1>
         <div className="bdd-toolservice">
           <img src={MongoDB} alt="" className="mongo" />
         </div>
-      </motion.div>
-      <motion.div
-        className="img-import"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.45 }}
-      >
+      </div>
+      <div className="img-import">
         <img src={white3} alt="" />
-      </motion.div>
+      </div>
     </>
   );
 };
