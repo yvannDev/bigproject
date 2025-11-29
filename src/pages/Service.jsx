@@ -3,6 +3,7 @@ import pen from "../assets/pen.png";
 import db from "../assets/db.png";
 import MongoDB from "../assets/mongoDB.png";
 import white3 from "../assets/white3.svg";
+import Footer from "../components/footer"
 
 const Servive = () => {
   return (
@@ -90,6 +91,8 @@ const Servive = () => {
       <div className="img-import">
         <img src={white3} alt="" />
       </div>
+
+      <Footer/>
     </>
   );
 };

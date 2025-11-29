@@ -56,7 +56,7 @@ const Navbar = () => {
               <NavLink
                 to={"/portfolio"}
                 className={({ isActive }) =>
-                  `nav-link ${isActive ? "active" : ""}`
+                  `nav-link ${isActive ? "active" : ""}` 
                 }
                 onClick={() => setmenu(false)}
               >

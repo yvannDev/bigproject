@@ -2,6 +2,8 @@ import re from "../assets/re.png";
 import dulans from "../assets/dulans.png";
 import iaes1 from "../assets/iaes1.png";
 import Nextfolio from "./Nextfolio";
+import Footer from "../components/footer"
+
 
 const Portfolio = () => {
   return (
@@ -13,7 +15,7 @@ const Portfolio = () => {
       <div className="web-dev-folio">
         <div className="content-portfolio">
           <div className="card-info-img">
-            <img src={re} alt="" className="absolute-img" />
+            <img src={re} alt="" className="absolute-img" loading="lazy"/>
 
             <div className="info-webfolio">
               <h1 className="dev-name">reservation d'hotel en ligne</h1>
@@ -28,7 +30,7 @@ const Portfolio = () => {
         </div>
         <div className="content-portfolio">
           <div className="card-info-img">
-            <img src={dulans} alt="" className="absolute-img" />
+            <img src={dulans} alt="" className="absolute-img" loading="lazy"/>
 
             <div className="info-webfolio">
               <h1 className="dev-name">reservation de plat en ligne</h1>
@@ -43,9 +45,9 @@ const Portfolio = () => {
         </div>
         <div className="content-portfolio">
           <div className="card-info-img">
-            <img src={iaes1} alt="" className="absolute-img" />
+            <img src={iaes1} alt="" className="absolute-img" loading="lazy"/>
 
-            <div className="info-webfolio">
+            <div className="info-webfolio">   
               <h1 className="dev-name">site web vitrine iaes</h1>
               <div className="phrase-folio">
                 <p>
@@ -62,6 +64,8 @@ const Portfolio = () => {
         Portfolio={Portfolio}
         title={"graphique design et web design"}
       />
+
+      <Footer/>
     </>
   );
 };

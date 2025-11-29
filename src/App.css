@@ -539,7 +539,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 50vh;
+  min-height: 35vh;
+  font-size: 1.5rem;
 }
 
 .web-dev-folio {
@@ -664,7 +665,112 @@ body {
   object-fit: contain;
   padding: 10px;
 }
- 
+
+
+
+
+
+/* **********************contact et footer*************** */
+
+.content-form-contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 30vh;
+}
+.content-form-contact .title-forme {
+  font-size: 2.1rem;
+  position: absolute;
+  top: 20%;
+}
+
+.form-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+}
+
+.form-content .form-group {
+  background-color: var(--backColor);
+  border: 2px solid var(--blueColor);
+  border-radius: 7px;
+  padding: 10px;
+}
+.form-content .form-group .input-hover {
+  position: relative;
+  margin: 20px;
+}
+.form-content .form-group .animation-name {
+  padding: 1rem;
+  width: 500px;
+  background-color: var(--backColor);
+  border: 0;
+  font-size: 1rem;
+  color: var(--textColor);
+  border: 2px solid var(--blueColor);
+  border-radius: 5px;
+}
+.form-content .form-group #message {
+  resize: none;
+  width: 500px;
+}
+.form-content .form-group .form-label {
+  position: absolute;
+  left: 15px;
+  padding: 5px;
+  top: 50%;
+  text-transform: capitalize;
+  font-size: 1rem;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+.form-content .form-group .animation-name:focus ~ .form-label,
+.form-content .form-group .animation-name:valid ~ .form-label {
+  top: 0;
+  background-color: var(--backColor);
+}
+
+.form-content .form-group .btn-submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-content .form-group .btn-submit .valid {
+  padding: 1.1rem;
+  width: 300px;
+  border: 0;
+  background-color: var(--blueColor);
+  color: var(--textColor);
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form-content .form-group .btn-submit .valid:hover {
+  filter: drop-shadow(4px 1px 14px var(--blueColor));
+}
+
+.footer {
+  background-color: var(--varmsColor);
+  text-align: center;
+  color: var(--textColor);
+  text-transform: capitalize;
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer .link a img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+
+  margin: 0 10px;
+  filter: var(--filter-drop) var(--textColor);
+}
 
 /*************** seulement pour les ecrans a <=768px *****************/
 
@@ -817,6 +923,382 @@ body {
     line-height: 3;
     place-items: center;
   }
+
+  /* **************Portfolio ************/
+
+  .web-dev-folio {
+    flex-direction: column;
+  }
+
+  .web-dev-folio .content-portfolio .card-info-img {
+    padding: 30px;
+    max-width: 800px;
+    margin: 2rem;
+  }
+
+  .web-dev-folio .content-portfolio .card-info-img .absolute-img {
+    width: 600px;
+  }
+
+  .container-folio-blog {
+    margin: 1rem;
+  }
+  .container-folio-blog .web-design-andgraphique {
+    flex-direction: column;
+  }
+
+  .container-folio-blog .web-design-andgraphique .info-wd-wd {
+    margin: 2rem;
+  }
+
+  /* **********************contact et footer*************** */
+
+  .content-form-contact {
+    margin-top: 1rem;
+  }
+  .content-form-contact .title-forme {
+    position: absolute;
+    top: 25%;
+  }
+}
+
+/*************** seulement pour les ecrans a <=480px *****************/
+
+@media only screen and (max-width: 480px) {
+  /***********Home****************/
+  .element-home {
+    font-size: 1rem;
+    margin: 2rem;
+  }
+
+  .container-type-img .after-img::after {
+    width: 400px;
+    height: 300px;
+    top: 5%;
+    left: 0;
+  }
+
+  .container-type-img .after-img .img-home {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+  }
+
+  .info-home .sub-info-home {
+    position: absolute;
+    top: 97%;
+    left: 3%;
+
+  }
+
+  .info-home .sub-info-home .cv-download {
+    color: var(--blueColor);
+    border: 2px solid var(--textColor);
+    padding: 0.4rem;
+    font-size: 1.5rem;
+    width: 400px;
+  }
+
+  /************************ Apropos******************* */
+
+  .container_about {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @keyframes fadeIn {
+    from {
+      transform: scale(0.7);
+      opacity: 0;
+    }
+
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  .container_about .picture-about .about-img {
+    background-color: var(--blueColor);
+    width: 200px;
+    height: 200px;
+  }
+
+  .container_about .info-about {
+    line-height: 1.6;
+  }
+
+  .container_about .info-about .more-btn {
+    width: 400px;
+    padding: 0.5rem;
+    text-align: center;
+    font-size: 1.3rem;
+    color: var(--textColor);
+    text-transform: capitalize;
+  }
+
+  .blogtitlePortf .title-folio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 35vh;
+  }
+
+  .web-dev-folio {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  /*  *****************portfolio***************** */
+
+  .web-dev-folio .content-portfolio .card-info-img .absolute-img {
+    width: 380px;
+  }
+
+  /* **********************contact et footer*************** */
+
+  .content-form-contact .title-forme {
+    font-size: 1.4rem;
+    position: absolute;
+    top: 20%;
+  }
+
+  .content-form-contact {
+    margin-top: 1rem;
+  }
+  .content-form-contact .title-forme {
+    position: absolute;
+    top: 25%;
+    font-size: 1rem;
+  }
+
+  .form-content .form-group .animation-name {
+    padding: 1rem;
+    width: 300px;
+  }
+
+  .form-content .form-group #message {
+    resize: none;
+    width: 300px;
+  }
+  .form-content .form-group .form-label {
+    position: absolute;
+    left: 35px;
+  }
+  .form-content .form-group .animation-name:focus ~ .form-label,
+  .form-content .form-group .animation-name:valid ~ .form-label {
+    top: 0;
+    background-color: var(--backColor);
+  }
+
+  .form-content .form-group .btn-submit .valid {
+    padding: 0.5rem;
+    width: 200px;
+    font-size: 1rem;
+  }
+  .form-content .form-group .btn-submit .valid:hover {
+    filter: drop-shadow(5px 2px 8px var(--blueColor));
+  }
+}
+
+/*************** seulement pour les ecrans a <=640px *****************/
+@media only screen and (max-width: 640px) {
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    position: fixed;
+    z-index: 999;
+    right: 5%;
+  }
+
+  .navHeader .nav-bar .nav-menu {
+    position: fixed;
+    right: 100%;
+    flex-direction: column;
+    height: 50vh;
+    width: 100%;
+    top: 0;
+    line-height: 2.5;
+    z-index: 999;
+    border-bottom: 2px solid var(--darkColor);
+    box-shadow: 5px 5px 10px black;
+  }
+
+  .navHeader .nav-bar .nav-menu.active {
+    flex-direction: column;
+    background-color: var(--backColor);
+    height: 50vh;
+    right: -10%;
+    width: 70%;
+    top: 0;
+    line-height: 2.5;
+    z-index: 999;
+    border-bottom: 2px solid var(--darkColor);
+    border-radius: 10px;
+  }
+
+  /********* Home *********** */
+  .element-home .container-type-code .title-nam {
+    font-size: 1.2rem;
+  }
+
+  .element-home .container-type-code {
+    line-height: 1.3;
+  }
+
+  .element-home .container-type-code .yvanName {
+    font-size: 1.4rem;
+  }
+
+  .element-home .container-type-code .typed-change {
+    font-size: 1.1rem;
+  }
+
+  .element-home .container-type-code .typed-change #je-suis {
+    font-size: 1rem;
+  }
+
+  .container-type-img .after-img::after {
+    width: 250px;
+    height: 180px;
+    top: 40%;
+  }
+
+  .container-type-img .after-img .img-home {
+    width: 250px;
+    height: 250px;
+  }
+
+  .home-network {
+    position: relative;
+    left: 5%;
+  }
+
+  .home-network .follow {
+    margin: 5px;
+    padding: 0.8rem;
+  }
+
+  .info-home .svgWhite-img {
+    position: relative;
+    width: 100vw;
+    height: auto;
+  }
+
+  .info-home .sub-info-home {
+    position: absolute;
+    top: 85%;
+    left: 5%;
+  }
+
+  .info-home .sub-info-home .cv-download {
+    color: var(--blueColor);
+    border: 2px solid var(--textColor);
+    padding: 0.8rem;
+    font-size: 1rem;
+  }
+
+  /************************ Apropos ******************* */
+  .container_about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 6s ease-in-out;
+    min-height: 100vh;
+  }
+
+  .container_about .picture-about .about-img {
+    background-color: var(--blueColor);
+    width: 250px;
+    height: 250px;
+  }
+
+  .container_about .info-about .more-btn {
+    width: 250px;
+    padding: 0.8rem;
+    font-size: 0.9rem;
+    color: var(--textColor);
+    text-transform: capitalize;
+  }
+
+  /************** Service ******************** */
+  .services-content .services-and-skill .different-service {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .service-development-and-design {
+    display: grid;
+    grid-template-columns: 100%;
+    line-height: 2.5;
+    place-items: center;
+  }
+
+  /************** Portfolio ************ */
+  .web-dev-folio {
+    flex-direction: column;
+  }
+
+  .web-dev-folio .content-portfolio .card-info-img {
+    padding: 20px;
+    max-width: 600px;
+    margin: 1.5rem;
+  }
+
+  .web-dev-folio .content-portfolio .card-info-img .absolute-img {
+    width: 500px;
+  }
+
+  .container-folio-blog {
+    margin: 1rem;
+  }
+
+  .container-folio-blog .web-design-andgraphique {
+    flex-direction: column;
+  }
+
+  .container-folio-blog .web-design-andgraphique .info-wd-wd {
+    margin: 1.5rem;
+  }
+
+  /********************** Contact et Footer *************** */
+  .content-form-contact {
+    margin-top: 1rem;
+  }
+
+  .content-form-contact .title-forme {
+    position: absolute;
+    top: 20%;
+    font-size: 1.2rem;
+  }
+
+  .form-content .form-group .animation-name {
+    padding: 0.8rem;
+    width: 280px;
+  }
+
+  .form-content .form-group #message {
+    resize: none;
+    width: 280px;
+  }
+
+  .form-content .form-group .form-label {
+    position: absolute;
+    left: 25px;
+  }
+
+  .form-content .form-group .btn-submit .valid {
+    padding: 0.5rem;
+    width: 180px;
+    font-size: 0.9rem;
+  }
+
+  .form-content .form-group .btn-submit .valid:hover {
+    filter: drop-shadow(4px 2px 6px var(--blueColor));
+  }
 }
 
 /*************** seulement pour les ecrans a <=414px *****************/
@@ -917,7 +1399,7 @@ body {
 
   .info-home .sub-info-home {
     position: absolute;
-    top: 88%;
+    top: 98%;
     left: 5%;
   }
 
@@ -957,5 +1439,44 @@ body {
     grid-template-columns: 100%;
     line-height: 3;
     place-items: center;
+  }
+
+  /* **********************contact et footer*************** */
+
+  .content-form-contact {
+    margin-top: 1rem;
+  }
+  .content-form-contact .title-forme {
+    position: absolute;
+    top: 25%;
+    font-size: 1rem;
+  }
+
+  .form-content .form-group .animation-name {
+    padding: 1rem;
+    width: 300px;
+  }
+
+  .form-content .form-group #message {
+    resize: none;
+    width: 300px;
+  }
+  .form-content .form-group .form-label {
+    position: absolute;
+    left: 35px;
+  }
+  .form-content .form-group .animation-name:focus ~ .form-label,
+  .form-content .form-group .animation-name:valid ~ .form-label {
+    top: 0;
+    background-color: var(--backColor);
+  }
+
+  .form-content .form-group .btn-submit .valid {
+    padding: 0.5rem;
+    width: 200px;
+    font-size: 1rem;
+  }
+  .form-content .form-group .btn-submit .valid:hover {
+    filter: drop-shadow(5px 2px 8px var(--blueColor));
   }
 }

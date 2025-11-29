@@ -7,7 +7,7 @@ import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact";
 import Navbar from "./Navbar";
 
-function App() {
+function App() {    
   return (
     <BrowserRouter>
       <Navbar />

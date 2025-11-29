@@ -1,9 +1,11 @@
 import yvanDev from "../assets/yvanDev.png";
 import { Link } from "react-router-dom";
+import Footer from "../components/footer";
 
-const Apropos = () => {
+const Apropos = () => {   
   return (
-    <div className="container_about">
+     <>
+        <div className="container_about">
       <div className="picture-about">
         <img src={yvanDev} alt="" className="about-img" />
       </div>
@@ -24,6 +26,10 @@ const Apropos = () => {
         </Link>
       </div>
     </div>
+
+    <Footer/>
+     </>
+    
   );
 };
 
