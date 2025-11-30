@@ -61,6 +61,37 @@ const Nextfolio = ({ Portfolio, title }) => {
           </div>
         </div>
       </div>
+
+      <div className="impact-group-fol container">
+                 <h3 className="title-impact">l'impact de nos produits en chiffres</h3>
+                   <div className="impac-blog-phrase container">
+                        
+                        <p>
+                          nos solutions apportent des resultats concrets:
+                          de la satisfaction client a la réussite  des projets, ces
+                          chiffres parlent d'eux-meme
+
+                        </p>
+                   </div>
+                   <div className="four-blog-folio container">
+                             <div className="flex-blog-child">
+                                    <span>+2</span>
+                                       <p>année d'experiénce</p>
+                             </div>
+                             <div className="flex-blog-child">
+                                    <span>+50</span>
+                                       <p>projets realisés</p>
+                             </div>
+                             <div className="flex-blog-child">
+                                    <span>+350</span>
+                                       <p>clients satisfaits</p>
+                             </div>
+                             <div className="flex-blog-child">
+                                    <span>+350</span>
+                                       <p>cofee cups</p>
+                             </div>
+                   </div>
+      </div>
     </>
   );
 };

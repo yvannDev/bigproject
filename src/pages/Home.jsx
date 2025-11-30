@@ -21,7 +21,7 @@ const Home = () => {
       backSpeed: 10,
       backDelay: 1000,
       loop: true,
-      // showCursor: true,
+      showCursor: true,
     });
 
     return () => {
@@ -40,7 +40,7 @@ const Home = () => {
           </div>
         </div>
         <div
-          className="container-type-img"        >
+          className="container-type-img">
           <div className="after-img">
             <img
               className="img-home"
