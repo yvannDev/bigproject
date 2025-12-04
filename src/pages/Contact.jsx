@@ -1,14 +1,19 @@
 import Footer from "../components/footer";
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";   
+// import GoolemapLocation from "./GoolemapLocation";
+import {  SendHorizontalIcon } from "lucide-react";
+
 
 const Contact = () => {
-  const [loading, setLoading] = useState(false); // Correction : boolean au lieu de string
+  const [loading, setLoading] = useState(null); // Correction : boolean au lieu de string
   const formRef = useRef();
   const [form, setForm] = useState({
     nom: "",
     email: "",
-    objet: "",
+    object: "",
     message: "",
   });
 
@@ -29,7 +34,7 @@ const Contact = () => {
           to_name: "regis",
           from_email: form.email,
           to_email: "regisclaude8@gmail.com",
-          objet: form.objet,
+          object: form.object,
           message: form.message,
         },
         "YS6GfzBQAm4VbdQ-g"
@@ -37,18 +42,18 @@ const Contact = () => {
       .then(
         () => {
           setLoading(false);
-          alert("Envoi réussi ! Je vous répondrai dès que possible.");
+          toast.success("Envoi réussi ! Je vous répondrai dès que possible.");
 
           setForm({
             nom: "",
             email: "",
-            objet: "",
+            object: "",
             message: "",
           });
         },
         (error) => {
           console.log(error);
-          alert("Envoi impossible. Veuillez réessayer.");
+          toast.error("Envoi impossible. Veuillez réessayer.");
           setLoading(false);
         }
       );
@@ -56,8 +61,9 @@ const Contact = () => {
 
   return (
     <>
+    <ToastContainer position="top-right" autoClose={5000} />
       <div className="content-form-contact">
-        <h1 className="title-forme">Veuillez me contacter en cas d'urgence</h1>
+        <h1 className="title-forme">Veuillez nous contactés</h1>
       </div>
       <div className="form-content container">
         <form ref={formRef} onSubmit={handleSubmit} className="form-group">
@@ -91,15 +97,15 @@ const Contact = () => {
           </div>
           <div className="input-hover">
             <input
-              className={`animation-name ${form.objet ? "filled" : ""}`}
+              className={`animation-name ${form.object ? "filled" : ""}`}
               onChange={handleChange}
               type="text"
-              name="objet"
-              value={form.objet}
-              id="objet"
+              name="object"
+              value={form.object}
+              id="object"
               required
             />
-            <label htmlFor="objet" className="form-label">
+            <label htmlFor="object" className="form-label">
               Votre objet
             </label>
           </div>
@@ -121,10 +127,12 @@ const Contact = () => {
           <div className="btn-submit">
             <button className="valid" type="submit">
               {loading ? "En cours..." : "Envoyer"}
+              <SendHorizontalIcon className="plane" size={30}/>
             </button>
           </div>
         </form>
       </div>
+      {/* <GoolemapLocation /> */}
       <Footer />
     </>
   );

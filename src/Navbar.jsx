@@ -2,6 +2,7 @@ import { Link, NavLink } from "react-router-dom";
 import { useState } from "react";
 // Lucide icons (assumes package `lucide-react` is installed)
 import { Home, User, Briefcase, Grid, Mail } from "lucide-react";
+import dev from "./assets/dev.png";
 
 const Navbar = () => {
   const [menu, setmenu] = useState(null);
@@ -13,7 +14,13 @@ const Navbar = () => {
       <header className="navHeader">
         <nav className="nav-bar">
           <Link to={"/"} className="nav-logo">
-            yvan<span className="logo">Dev</span>
+           <img src={dev} alt=""  loading="lazy"
+           style={{
+            widht:"50px",
+            height:"50px"
+           }}
+           
+           />
           </Link>
           <ul className={`nav-menu ${menu ? "active" : ""}`}>
             <li className="nav-items">

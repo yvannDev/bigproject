@@ -2,6 +2,8 @@ import d1 from "../assets/d1.png";
 import d2 from "../assets/d2.png";
 import std from "../assets/std.png";
 import mtn from "../assets/MTN.JPEG";
+import { Link} from "react-router-dom";
+
 
 const Nextfolio = ({ Portfolio, title }) => {
   return (
@@ -19,7 +21,7 @@ const Nextfolio = ({ Portfolio, title }) => {
                   Ce projet met en avant des compétences en développement et en
                   design, avec une attention particulière portée à la qualité,
                   la performance et l'innovation. Chaque détail a été
-                  soigneusement pensé pour répondre aux besoins spécifiques des
+                  soigneusement pensé pour répondre aux besoins spécifiques des 
                   utilisateurs.
                 </p>
               </div>
@@ -90,6 +92,22 @@ const Nextfolio = ({ Portfolio, title }) => {
                                     <span>+350</span>
                                        <p>cofee cups</p>
                              </div>
+                   </div>
+
+                   <h5 className="follow-folio">contactez-nous pour une solution personnalisée.</h5>
+
+                   <div className="follow-form">
+                          <div className="phrase-f">
+                              vous avez un projet , une idée ou un besoin spécifique ?
+                              parlons-en ! notre équipe est a votre écoute pour vous 
+                              proposer des solutions sur mesure, adaptée a vos objectifs
+                              et a votre secteur d'activé.
+
+
+                          </div>
+                          <div className="follow-since-conta">
+                                <Link to={"/contact"} className="btn-since-conta">nous contactez</Link> 
+                          </div>
                    </div>
       </div>
     </>

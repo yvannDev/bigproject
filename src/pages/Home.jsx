@@ -3,7 +3,7 @@ import cvpdf from "../assets/cvPdf.pdf";
 import { useEffect, useRef } from "react";
 import Typed from "typed.js";
 import blue1 from "../assets/blue1.svg";
-import { Mail, Linkedin, Github,Facebook ,MessageCircle,DownloadCloud ,} from "lucide-react";
+import { Linkedin, Github ,MessageCircle,DownloadCloud ,Facebook} from "lucide-react";
 import Footer from "../components/footer"
 
 const Home = () => {
@@ -57,8 +57,8 @@ const Home = () => {
         className="home-network"
 
       >
-        <a href="mailto:bukamyvan0@gmail.com" className="follow">
-          <Mail size={30} className="follow-icon" />
+        <a href="https://www.facebook.com/profile.php?id=61584026971537" className="follow">
+          <Facebook size={30} className="follow-icon" />
         </a>
         <a href="https://linkedin.com/in/yvan-wafo-067513304/" className="follow">
           <Linkedin size={30} className="follow-icon" />

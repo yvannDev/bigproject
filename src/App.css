@@ -715,6 +715,42 @@ body {
   font-weight: bold;
 }
 
+.impact-group-fol .follow-folio{
+  font-size: 1.8rem;
+  text-align: center;
+  text-transform: capitalize;
+  display: block;
+  max-width: 1200px;
+}
+
+.impact-group-fol .follow-form{
+  text-align: center;
+  line-height: 2;
+}
+
+.impact-group-fol .phrase-f{
+  max-width: 1200px;
+  font-size: 1.2rem;
+}
+.impact-group-fol .follow-since-conta{
+  max-width: 1200px;
+  font-size: 1.2rem;
+  margin: 15px;
+}
+
+.impact-group-fol .follow-since-conta .btn-since-conta{
+  text-decoration: none;
+  color: var(--textColor);
+  padding: 1.3rem;
+  font-weight: bold;
+  text-transform: capitalize;
+  background: linear-gradient(to right,var(--blueColor),var(--varmsColor) 50%);
+  border-radius: 10px
+
+}
+
+
+
 /* **********************contact et footer*************** */
 
 .content-form-contact {
@@ -727,6 +763,7 @@ body {
   font-size: 2.1rem;
   position: absolute;
   top: 20%;
+  text-transform: capitalize;
 }
 
 .form-content {
@@ -788,14 +825,26 @@ body {
   border: 0;
   background-color: var(--blueColor);
   color: var(--textColor);
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   text-transform: capitalize;
   border-radius: 5px;
   cursor: pointer;
 }
+/* googleMaplocation */
+
+.map h2{
+  text-align: center;
+  font-size: 2rem;
+  text-transform: capitalize;
+}
 
 .form-content .form-group .btn-submit .valid:hover {
   filter: drop-shadow(4px 1px 14px var(--blueColor));
+
+}
+.plane{
+  transform: translateY(5%);
+  float: right;
 }
 
 .footer {
