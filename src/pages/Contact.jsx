@@ -30,7 +30,7 @@ const Contact = () => {
         "service_o3zxb2s",
         "template_hcm3l25",
         {
-          from_name: form.nom,
+          from_name: form.name,
           to_name: "regis",
           from_email: form.email,
           to_email: "regisclaude8@gmail.com",
@@ -45,7 +45,7 @@ const Contact = () => {
           toast.success("Envoi réussi ! Je vous répondrai dès que possible.");
 
           setForm({
-            nom: "",
+            name: "",
             email: "",
             object: "",
             message: "",
@@ -69,11 +69,11 @@ const Contact = () => {
         <form ref={formRef} onSubmit={handleSubmit} className="form-group">
           <div className="input-hover">
             <input
-              className={`animation-name ${form.nom ? "filled" : ""}`}
+              className={`animation-name ${form.name ? "filled" : ""}`}
               onChange={handleChange}
               type="text"
-              name="nom"
-              value={form.nom}
+              name="name"
+              value={form.name}
               id="nom"
               required
             />
